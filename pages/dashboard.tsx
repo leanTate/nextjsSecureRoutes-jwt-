@@ -9,7 +9,7 @@ const Dashboard = () => {
   }
   const [user,setUser]=useState()
   const logout=async()=>{
-    const res = await axios.post('/api/logout');
+    const res = await axios.post('/api/auth/logout');
     if(res.status===200){
       router.push('/login')
     }
